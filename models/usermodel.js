@@ -1,6 +1,4 @@
-import mongoose from "mongoose";
-
-mongoose.connect("mongodb://0.0.0.0:27017/scratch");
+const mongoose = require("mongoose");
 
 const userSchema = mongoose.Schema({
   fullname: {
@@ -25,4 +23,4 @@ const userSchema = mongoose.Schema({
 
 const userModel = mongoose.model("user", userSchema);
 
-export default userModel;
+module.exports  = userModel;
